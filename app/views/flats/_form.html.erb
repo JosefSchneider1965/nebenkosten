@@ -1,0 +1,72 @@
+<%= form_with(model: flat, local: true) do |form| %>
+  <% if flat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
+
+      <ul>
+        <% flat.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Adresse %>
+    <%= form.text_field :Adresse %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Beschreibung %>
+    <%= form.text_area :Beschreibung %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Wasser %>
+    <%= form.text_field :Wasser %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Abwasser %>
+    <%= form.text_field :Abwasser %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Kaminkehrer %>
+    <%= form.text_field :Kaminkehrer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Abfallbeseitigung %>
+    <%= form.text_field :Abfallbeseitigung %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Grundsteuer %>
+    <%= form.text_field :Grundsteuer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Heizungswartung %>
+    <%= form.text_field :Heizungswartung %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Versicherung %>
+    <%= form.text_field :Versicherung %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Vorauszahlung %>
+    <%= form.text_field :Vorauszahlung %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Restzahlung %>
+    <%= form.text_field :Restzahlung %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

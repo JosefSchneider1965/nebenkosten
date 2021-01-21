@@ -1,0 +1,9 @@
+* Inhalte
+Nach Login erhält jeder Mieter für seine Wohnung dies angezeigt:
+** Nebenkostenabrechnungen (als Tabelle)
+** Rechnungen
+
+* Rollen
+** Eigentümer
+** Mieter
+

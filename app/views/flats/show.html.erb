@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @flat.Adresse %>
+</p>
+
+<p>
+  <strong>Beschreibung:</strong>
+  <%= @flat.Beschreibung %>
+</p>
+
+<p>
+  <strong>Wasser:</strong>
+  <%= @flat.Wasser %>
+</p>
+
+<p>
+  <strong>Abwasser:</strong>
+  <%= @flat.Abwasser %>
+</p>
+
+<p>
+  <strong>Kaminkehrer:</strong>
+  <%= @flat.Kaminkehrer %>
+</p>
+
+<p>
+  <strong>Abfallbeseitigung:</strong>
+  <%= @flat.Abfallbeseitigung %>
+</p>
+
+<p>
+  <strong>Grundsteuer:</strong>
+  <%= @flat.Grundsteuer %>
+</p>
+
+<p>
+  <strong>Heizungswartung:</strong>
+  <%= @flat.Heizungswartung %>
+</p>
+
+<p>
+  <strong>Versicherung:</strong>
+  <%= @flat.Versicherung %>
+</p>
+
+<p>
+  <strong>Vorauszahlung:</strong>
+  <%= @flat.Vorauszahlung %>
+</p>
+
+<p>
+  <strong>Restzahlung:</strong>
+  <%= @flat.Restzahlung %> 
+  <!-- <%= @flat.Wasser + @flat.Abwasser + @flat.Kaminkehrer + @flat.Abfallbeseitigung +
+  @flat.Grundsteuer - (12 * @flat.Vorauszahlung) %> -->
+</p>
+
+<%= link_to 'Edit', edit_flat_path(@flat) %> |
+<%= link_to 'Back', flats_path %>

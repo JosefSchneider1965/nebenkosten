@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Adresse: MyString
+  Beschreibung: MyText
+  Wasser: 9.99
+  Abwasser: 9.99
+  Kaminkehrer: 9.99
+  Abfallbeseitigung: 9.99
+  Grundsteuer: 9.99
+  Heizungswartung: 9.99
+  Versicherung: 9.99
+  Vorauszahlung: 9.99
+  Restzahlung: 9.99
+
+two:
+  Adresse: MyString
+  Beschreibung: MyText
+  Wasser: 9.99
+  Abwasser: 9.99
+  Kaminkehrer: 9.99
+  Abfallbeseitigung: 9.99
+  Grundsteuer: 9.99
+  Heizungswartung: 9.99
+  Versicherung: 9.99
+  Vorauszahlung: 9.99
+  Restzahlung: 9.99
