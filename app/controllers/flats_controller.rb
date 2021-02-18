@@ -1,5 +1,6 @@
 class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /flats
   # GET /flats.json
@@ -71,6 +72,6 @@ class FlatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def flat_params
-      params.require(:flat).permit(:Adresse, :Beschreibung, :Wasser, :Abwasser, :Kaminkehrer, :Abfallbeseitigung, :Grundsteuer, :Heizungswartung, :Versicherung, :Vorauszahlung, :Restzahlung)
+      params.require(:flat).permit(:Adresse, :Beschreibung, :Wasser, :Abwasser, :Kaminkehrer, :Abfallbeseitigung, :Grundsteuer, :Heizungswartung, :Versicherung, :Vorauszahlung, :Restzahlung, :Jahr, :user_id)
     end
 end

@@ -1,13 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
     <title>Website der Familie Schneider!</title>
+    <meta charset="utf-8">
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      background: #c4b00f;
+      padding: 0.5em;
+      margin: 0;
+    }
+    nav {
+      border 1px;
+      text-align: center;
+    }
+    #sidebar {
+      float: left;
+      left: 0;
+      margin: 0;
+      padding: 2% 2%;
+      border: 0;
+      width: 22%;
+      background: #a21717;
+      height:500px;
+    }
+    #sidebar a {
+      color: #bfb;
+      text-decoration: none;
+    }
+    #sidebar a:hover {
+      background: none;
+      color: white;
+    }
+    main {
+      float: left;
+      margin: 0;
+      padding: 2% 2%;
+      margin: 0;
+      border: 0;
+      width: 78%;
+      background: #f5dddc;
+      height: 500px;
+    }
+    /* article {
+      border: 1px dashed black;
+    } */
+    footer {
+      text-align: center;
+      margin: 0em;
+      padding: 0.2em;
+      border: 2px solid black;
+      background: #c4b00f;
+    }
+    .clear { clear: both; }
+    </style>
   </head>
 
-  <body style="background-image:url(luftbild-buxheim.jpeg)">
-    <h1> Willkommen auf der Website der Familie Schneider! </h1>
-    <p><a href="realestates"> Immobilien </a></p>
-    <p><a href="flats"> Nebenkostenabrechnungen </a></p>
-    <p><a href="bills"> Rechnungen </a></p>
+  <!-- <body style="background-image:url(luftbild-buxheim.jpeg)"> -->
+  <body>
+    <header>
+      <h1> Willkommen auf der Website der Familie Schneider! </h1>
+    </header>
+    <!-- <nav id="mainnav">
+      <a href="#">Immobilien</a> | <a href="#">Nebenkostenabrechnungen</a> | <a href="#">Rechnungen</a>
+    </nav> -->
+    <aside id="sidebar">
+      <h3>Navigation</h3>
+      <!-- <p>Einführung in die Seiteninhalte</p> -->
+      <p><a href="realestates"> Immobilien </a></p>
+      <p><a href="flats"> Nebenkostenabrechnungen </a></p>
+      <p><a href="bills"> Rechnungen </a></p>
+    </aside>
+    <main>
+      <article>
+        <h1>Artikel 1</h1>
+        <p>Text1</p>
+      </article>
+      <article class="">
+        <h1>Artikel 2</h1>
+        <p>Text 2</p>
+      </article>
+      <article>
+        <h1>Artikel 3</h1>
+        <p>Text3</p>
+      </article>
+      <article class="">
+        <h1>Artikel 4</h1>
+        <p>Text 4</p>
+      </article>
+    </main>
+    <footer class="clear">Fußzeile</footer>
   </body>
 </html>

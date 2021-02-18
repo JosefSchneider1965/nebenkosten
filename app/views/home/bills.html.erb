@@ -1,0 +1,47 @@
+<h1> Rechnungen</h1>
+<h2> Buxheim </h2>
+<ul>
+  <% if user_signed_in? && current_user.id == 3 %>
+  <li> Tulpenweg 2 </li>
+    <ul>
+      <% dirlist = Dir.children("#{Rails.root}/storage/tulpenweg2/") %>
+      <% dirlist.each do |direntry| %>
+      <li>
+        <%= "#{direntry}" %>
+      </li>
+      <% end %>
+      <%= link_to "Rechnungen 2020 (Zip-Format)", home_download_zip_path  %>
+    </ul>
+    <% end %>
+
+
+  <% if user_signed_in? && [1, 2].include?(current_user.id) %>
+    <li> Tulpenweg 4 </li>
+      <ul>
+        <% dirlist = Dir.children("#{Rails.root}/storage/tulpenweg4/") %>
+        <% dirlist.each do |direntry| %>
+        <li>
+          <%= "#{direntry}" %>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+
+  <% if user_signed_in? && [1, 6].include?(current_user.id) %>
+    <li> Tulpenweg 4a </li>
+      <% end %>
+  </ul>
+  <h2> Ingolstadt </h2>
+  <ul>
+      <% if user_signed_in? && [1, 5].include?(current_user.id) %>
+    <li> Harderstraße 24 - Wohnung A7? </li>
+    <% end %>
+        <% if user_signed_in? && [1, 4].include?(current_user.id) %>
+    <li> Adolf-Kolping-Stra&szlig;e 1 - Wohnung C9 </li>
+    <% end %>
+  </ul>
+
+
+  <!--
+  <a href="welcome"> zur&uuml;ck </a>
+  -->

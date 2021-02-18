@@ -10,6 +10,46 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <header>
+      <h1> Willkommen auf der Website von Familie Schneider! </h1>
+    </header>
+    <!-- <nav id="mainnav">
+      <a href="#">Immobilien</a> | <a href="#">Nebenkostenabrechnungen</a> | <a href="#">Rechnungen</a>
+    </nav> -->
+    <section class="content">
+    <aside id="sidebar">
+      <% if user_signed_in?  %>
+      <p>User ID: <%= current_user.id %></p>
+      <% end %>
+      <p><%= link_to "Home", root_path %></p>
+      <!-- <p>Einführung in die Seiteninhalte</p> -->
+      <% if user_signed_in?  %>
+      <% if current_user.id == 1 %>
+      <p><%= link_to "Immobilien", home_realestates_path %> </p>
+      <% end %>
+      <p> <%= link_to "Nebenkosten", flats_path %></p>
+      <p> <%= link_to "Rechnungen", home_bills_path %></p>
+      <% end %>
+      <hr>
+      <!-- flash message for "devise" -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <% if user_signed_in? %>
+        <p> <%= link_to "sign out", destroy_user_session_path, method: :delete %></p>
+        <p> <%= link_to "edit profile", edit_user_registration_path %></p>
+        <% if current_user.id == 1 %>
+          <p> <%= link_to "Registrieren", new_user_registration_path %></p>
+        <% end %>
+      <% else %>
+        <p> <%= link_to "Anmelden", new_user_session_path %></p>
+      <% end %>
+    </aside>
+    <main>
+       <%= yield %>
+    </main>
+    </section>
+    <footer class="clear">Fußzeile</footer>
+
   </body>
 </html>
