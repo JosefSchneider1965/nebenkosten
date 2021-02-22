@@ -38,13 +38,12 @@
       <% if user_signed_in? %>
         <p> <%= link_to "sign out", destroy_user_session_path, method: :delete %></p>
         <p> <%= link_to "edit profile", edit_user_registration_path %></p>
-        <% if current_user.id == 1 %>
-          <p> <%= link_to "Registrieren", new_user_registration_path %></p>
-        <% end %>
       <% else %>
         <p> <%= link_to "Anmelden", new_user_session_path %></p>
       <% end %>
+      <!-- 
       <p> <%= link_to "Registrieren", new_user_registration_path %></p>
+    -->
     </aside>
     <main>
        <%= yield %>
