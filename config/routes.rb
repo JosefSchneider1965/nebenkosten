@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'home/realestates'
   get 'home/index'
   get 'home/bills'
+  get 'home/impressum'
   get 'home/download_zip'
   root 'home#index'
   resources :flats

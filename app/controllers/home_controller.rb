@@ -9,6 +9,9 @@ class HomeController < ApplicationController
   def bills
   end
 
+  def impressum
+  end
+
   def download_zip
       if user_signed_in?
 #        if current_user.id == 2 || current_user.id == 1
